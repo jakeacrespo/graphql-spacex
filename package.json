@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "app that list spacex launch mision",
   "main": "server.js",
-  "scripts":{
-    "start":"node server.js",
-    "server":"nodemon server.js"
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "author": "alex maylin",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^15.0.0"
